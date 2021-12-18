@@ -1,0 +1,5 @@
+[workspace]
+members = [
+  "rssharp-sys",
+  "rssharp-src",
+]
