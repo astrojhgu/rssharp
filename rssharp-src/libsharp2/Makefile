@@ -16,9 +16,9 @@ lib/libsharp.a: pocketfft.o sharp_almhelpers.o sharp.o sharp_core.o sharp_core_i
 
 
 pysharp.so: py/pysharp.cc lib/libsharp.a
-	$(CXX) -o $@ $< -I . `pkg-config --cflags python` -L ./lib -lsharp  --shared -fPIC -O2
+	$(CXX) -o $@ $< -I . `pkg-config --cflags python3` -L ./lib -lsharp  --shared -fPIC -O2
 
-test: map2alm2map_test.cpp libsharp.a
+test: map2alm2map_test.cpp lib/libsharp.a
 	g++ -o $@ $< -I include -L ./lib -lsharp -lm
 
 clean: 
