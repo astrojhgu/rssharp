@@ -2,4 +2,5 @@
 members = [
   "rssharp-sys",
   "rssharp-src",
+  "rssharp",
 ]
