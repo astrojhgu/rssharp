@@ -1,12 +1,7 @@
 use std::{
-    env::{
-        var
-    }
-    ,path::{
-        PathBuf
-        , Path
-    }
-    , process::{Command}
+    env::var,
+    path::{Path, PathBuf},
+    process::Command,
 };
 
 fn build_sharp(_flags: &[&str], src_dir: &Path, out_dir: &Path) {
@@ -25,7 +20,8 @@ fn build_sharp(_flags: &[&str], src_dir: &Path, out_dir: &Path) {
             depth: 0,
             content_only: false,
         },
-    ).unwrap();
+    )
+    .unwrap();
 }
 
 fn run(command: &mut Command) {
@@ -42,7 +38,7 @@ fn run(command: &mut Command) {
     }
 }
 
-fn main(){
+fn main() {
     let src_dir = PathBuf::from(var("CARGO_MANIFEST_DIR").unwrap()).join("libsharp2");
     let out_dir = PathBuf::from(var("OUT_DIR").unwrap());
     let out_src_dir = out_dir.join("src");
@@ -57,9 +53,10 @@ fn main(){
             depth: 0,
             content_only: false,
         },
-    ).unwrap();
+    )
+    .unwrap();
     //if !out_dir.join("lib/libsharp.a").exists() {
-        build_sharp(&[], &out_src_dir, &out_dir);
+    build_sharp(&[], &out_src_dir, &out_dir);
     //}
     println!("cargo:rustc-link-search={}", out_dir.join("lib").display());
     println!("cargo:rustc-link-lib=static=sharp");

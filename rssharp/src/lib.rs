@@ -1,3 +1,4 @@
+#![allow(clippy::too_many_arguments)]
 /*
 use rssharp_sys::{
     alm2hmap
@@ -13,3 +14,4 @@ use rssharp_sys::{
 */
 pub mod ffi;
 pub mod transform;
+pub mod alm;
