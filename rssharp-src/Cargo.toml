@@ -1,15 +1,12 @@
-[package]
-name = "rssharp-src"
-version = "0.1.0"
-edition = "2021"
-
-build = "build.rs"
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[build-dependencies]
+anyhow = '1.0.31'
+cc = '1.0'
+fs_extra = '1.2.0'
 
 [dependencies]
 
-
-[build-dependencies]
-anyhow = "1.0.31"
-cc = "1.0"
-fs_extra = "1.2.0"
+[package]
+build = 'build.rs'
+edition = '2021'
+name = 'rssharp-src'
+version = '0.1.0'

@@ -1,8 +1,7 @@
 [workspace]
 members = [
-  "rssharp-sys",
-  "rssharp-src",
-  "rssharp",
+    'rssharp-sys',
+    'rssharp-src',
+    'rssharp',
 ]
-
-resolver="2"
+resolver = '2'
