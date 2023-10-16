@@ -4,3 +4,5 @@ members = [
   "rssharp-src",
   "rssharp",
 ]
+
+resolver="2"
