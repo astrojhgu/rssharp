@@ -6,13 +6,9 @@ use num::{
     }
 };
 
-use std::{
-    io::Write
-    , fs::File
-};
+
 use rssharp::{
-    transform
-    , ffi::{
+    ffi::{
         nside2npix
         , SharpFloat
     }
@@ -34,7 +30,7 @@ fn main() {
     let mut alm2=vec![Complex::<f64>::new(0.0, 0.0); n_alm(lmax, mmax)];
     //let (alm1,alm2)=transform::hmap2alm_spin_iter(&map1, &map2,2, nside, lmax, mmax, 1e-3,1e-3);
     f64::hmap2alm_spin(&map1, &map2, &mut alm1, &mut alm2, 2, nside, lmax, mmax, false);
-    for x in &alm1{
+    for _x in &alm1{
         //println!("{:e} {:e}", x.re, x.im);
     }
 
