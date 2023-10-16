@@ -1,23 +1,12 @@
 extern crate rssharp;
 
-use num::{
-    complex::{
-        Complex
-    }
-};
 
-use std::{
-    io::Write
-    , fs::File
-};
+
+
 use rssharp::{
     transform
     , ffi::{
         nside2npix
-        , SharpFloat
-    }
-    , alm::{
-        n_alm
     }
 };
 

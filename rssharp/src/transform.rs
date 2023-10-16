@@ -5,7 +5,7 @@ use crate::{
     }
 };
 
-use std::{default::Default, fmt::Debug};
+use std::{default::Default};
 
 use num::{complex::Complex, traits::Float};
 
